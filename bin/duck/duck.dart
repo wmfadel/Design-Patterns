@@ -2,20 +2,31 @@ import 'behaviours/fly_behaviour.dart';
 import 'behaviours/quack_behavior.dart';
 
 abstract class Duck {
-  late FlyBehavior flyBehavior;
-  late QuackBehavior quackBehavior;
+  late FlyBehavior _flyBehavior;
+  late QuackBehavior _quackBehavior;
+
+
+  set flyBehavior(FlyBehavior value) {
+    _flyBehavior = value;
+  }
+
+  set quackBehavior(QuackBehavior value) {
+    _quackBehavior = value;
+  }
 
   display();
 
   performQuack() {
-    quackBehavior.quack();
+    _quackBehavior.quack();
   }
 
   performFly() {
-    flyBehavior.fly();
+    _flyBehavior.fly();
   }
 
   swim() {
     print('All ducks float, even decoys!');
   }
+
+
 }

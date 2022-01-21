@@ -15,3 +15,10 @@ class FlyNoWay implements FlyBehavior {
     print('I can\'t fly!');
   }
 }
+
+class FlyRocketPower implements FlyBehavior {
+  @override
+  fly() {
+    print('I\'m Flying with a rocket');
+  }
+}

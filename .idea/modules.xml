@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ducks.iml" filepath="$PROJECT_DIR$/.idea/ducks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Heads-First-Design-Patterns.iml" filepath="$PROJECT_DIR$/.idea/Heads-First-Design-Patterns.iml" />
     </modules>
   </component>
 </project>

@@ -1,22 +1,20 @@
-abstract class Pizza{
+abstract class Pizza {
   late String name;
   late String dough;
   late String sauce;
-  late List<String> toppings = [];
-  prepare(){
-    print('preparing $name');
-    print('tossing dough');
-    print('adding sauce');
-    print('adding toppings');
-    print(toppings);
-  }
-  bake(){
+  late String cheese;
+
+  prepare();
+
+  bake() {
     print('baking');
   }
-  cut(){
+
+  cut() {
     print('cutting');
   }
-  box(){
+
+  box() {
     print('boxing');
   }
 }

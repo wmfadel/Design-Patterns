@@ -1,6 +1,10 @@
+import '../store/ingredients/ingrediants_factory.dart';
 import '../store/pizza.dart';
 
 class NYCheese implements Pizza {
+  IngredientsFactory ingredientsFactory;
+
+  NYCheese(this.ingredientsFactory);
 
   @override
   bake() {
@@ -19,24 +23,30 @@ class NYCheese implements Pizza {
 
   @override
   prepare() {
-    print('prepare NYCheese');
+    print('preparing $name');
+    dough = ingredientsFactory.createDough();
+    sauce = ingredientsFactory.createDough();
+    cheese = ingredientsFactory.createCheese();
   }
 
   @override
-  String dough = 'thin crust dough';
+  late String dough;
 
   @override
   String name = 'NY cheese';
 
   @override
-  String sauce = 'ny cheese sauce';
+  late String sauce;
 
   @override
-  List<String> toppings = ['nyA', 'nyB'];
+  late String cheese;
 }
 
-
 class NYVeggie implements Pizza {
+  IngredientsFactory ingredientsFactory;
+
+  NYVeggie(this.ingredientsFactory);
+
   @override
   bake() {
     print('bake NYVeggie');
@@ -54,18 +64,21 @@ class NYVeggie implements Pizza {
 
   @override
   prepare() {
-    print('prepare NYVeggie');
+    print('preparing $name');
+    dough = ingredientsFactory.createDough();
+    sauce = ingredientsFactory.createDough();
+    cheese = ingredientsFactory.createCheese();
   }
 
   @override
-  String dough = 'NY Veggie dough';
+  late String dough;
 
   @override
   String name = 'NYVeggie';
 
   @override
-  String sauce = 'NYVeggie sauce';
+  late String sauce;
 
   @override
-  List<String> toppings = ['NYVeggie top1', 'NYVeggie top2'];
+  late String cheese;
 }

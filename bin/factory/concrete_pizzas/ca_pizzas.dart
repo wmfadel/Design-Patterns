@@ -1,6 +1,11 @@
+import '../store/ingredients/ingrediants_factory.dart';
 import '../store/pizza.dart';
 
 class CACheese implements Pizza {
+  IngredientsFactory ingredientsFactory;
+
+  CACheese(this.ingredientsFactory);
+
   @override
   bake() {
     print('bake CACheese');
@@ -18,23 +23,30 @@ class CACheese implements Pizza {
 
   @override
   prepare() {
-    print('prepare CACheese');
+    print('preparing $name');
+    dough = ingredientsFactory.createDough();
+    sauce = ingredientsFactory.createDough();
+    cheese = ingredientsFactory.createCheese();
   }
 
   @override
-  String dough= 'CACheese dough';
+  late String dough;
 
   @override
   String name = 'CACheese';
 
   @override
-  String sauce = 'CACheese sauce';
+  late String sauce;
 
   @override
-  List<String> toppings = ['CACheese top1', 'CACheese top2'];
+  late String cheese;
 }
 
 class CAVeggie implements Pizza {
+  IngredientsFactory ingredientsFactory;
+
+  CAVeggie(this.ingredientsFactory);
+
   @override
   bake() {
     print('bake CAVeggie');
@@ -52,18 +64,21 @@ class CAVeggie implements Pizza {
 
   @override
   prepare() {
-    print('prepare CAVeggie');
+    print('preparing $name');
+    dough = ingredientsFactory.createDough();
+    sauce = ingredientsFactory.createDough();
+    cheese = ingredientsFactory.createCheese();
   }
 
   @override
-  String dough = 'CAVeggie dough';
+  late String dough;
 
   @override
   String name = 'CAVeggie';
 
   @override
-  String sauce = 'CAVeggie sauce';
+  late String sauce;
 
   @override
-  List<String> toppings = ['CAVeggie top1', 'CAVeggie top2'];
+  late String cheese;
 }

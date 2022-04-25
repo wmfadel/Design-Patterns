@@ -9,10 +9,6 @@ class CAPizzaStore extends PizzaStore{
     switch (type) {
       case PizzaType.cheese:
         return CACheese();
-      case PizzaType.pepperoni:
-        return CAPepperoni();
-      case PizzaType.clam:
-        return CAClamp();
       case PizzaType.veggie:
         return CAVeggie();
     }

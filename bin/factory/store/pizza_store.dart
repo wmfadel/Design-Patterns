@@ -1,6 +1,7 @@
 import '../pizza_type.dart';
 import 'pizza.dart';
 
+/// factory interface
 abstract class PizzaStore{
 
  Pizza orderPizza(PizzaType type){

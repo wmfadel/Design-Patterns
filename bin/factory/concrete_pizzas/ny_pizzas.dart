@@ -1,6 +1,7 @@
 import '../store/pizza.dart';
 
 class NYCheese implements Pizza {
+
   @override
   bake() {
     print('bake NYCheese');
@@ -20,29 +21,20 @@ class NYCheese implements Pizza {
   prepare() {
     print('prepare NYCheese');
   }
+
+  @override
+  String dough = 'thin crust dough';
+
+  @override
+  String name = 'NY cheese';
+
+  @override
+  String sauce = 'ny cheese sauce';
+
+  @override
+  List<String> toppings = ['nyA', 'nyB'];
 }
 
-class NYClamp implements Pizza {
-  @override
-  bake() {
-    print('bake NYClamp');
-  }
-
-  @override
-  box() {
-    print('box NYClamp');
-  }
-
-  @override
-  cut() {
-    print('cut NYClamp');
-  }
-
-  @override
-  prepare() {
-    print('prepare NYClamp');
-  }
-}
 
 class NYVeggie implements Pizza {
   @override
@@ -64,26 +56,16 @@ class NYVeggie implements Pizza {
   prepare() {
     print('prepare NYVeggie');
   }
-}
-
-class NYPepperoni implements Pizza {
-  @override
-  bake() {
-    print('bake NYPepperoni');
-  }
 
   @override
-  box() {
-    print('box NYPepperoni');
-  }
+  String dough = 'NY Veggie dough';
 
   @override
-  cut() {
-    print('cut NYPepperoni');
-  }
+  String name = 'NYVeggie';
 
   @override
-  prepare() {
-    print('prepare NYPepperoni');
-  }
+  String sauce = 'NYVeggie sauce';
+
+  @override
+  List<String> toppings = ['NYVeggie top1', 'NYVeggie top2'];
 }

@@ -20,28 +20,18 @@ class CACheese implements Pizza {
   prepare() {
     print('prepare CACheese');
   }
-}
-
-class CAClamp implements Pizza {
-  @override
-  bake() {
-    print('bake CAClamp');
-  }
 
   @override
-  box() {
-    print('box CAClamp');
-  }
+  String dough= 'CACheese dough';
 
   @override
-  cut() {
-    print('cut CAClamp');
-  }
+  String name = 'CACheese';
 
   @override
-  prepare() {
-    print('prepare CAClamp');
-  }
+  String sauce = 'CACheese sauce';
+
+  @override
+  List<String> toppings = ['CACheese top1', 'CACheese top2'];
 }
 
 class CAVeggie implements Pizza {
@@ -64,26 +54,16 @@ class CAVeggie implements Pizza {
   prepare() {
     print('prepare CAVeggie');
   }
-}
-
-class CAPepperoni implements Pizza {
-  @override
-  bake() {
-    print('bake CAPepperoni');
-  }
 
   @override
-  box() {
-    print('box CAPepperoni');
-  }
+  String dough = 'CAVeggie dough';
 
   @override
-  cut() {
-    print('cut CAPepperoni');
-  }
+  String name = 'CAVeggie';
 
   @override
-  prepare() {
-    print('prepare CAPepperoni');
-  }
+  String sauce = 'CAVeggie sauce';
+
+  @override
+  List<String> toppings = ['CAVeggie top1', 'CAVeggie top2'];
 }

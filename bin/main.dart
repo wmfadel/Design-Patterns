@@ -7,7 +7,7 @@ void main(List<String> arguments) async {
   PizzaStore nyStore = NYPizzaStore();
   PizzaStore caStore = CAPizzaStore();
 
-  nyStore.orderPizza(PizzaType.clam);
-  caStore.orderPizza(PizzaType.clam);
+  nyStore.orderPizza(PizzaType.cheese);
+  caStore.orderPizza(PizzaType.veggie);
 
 }

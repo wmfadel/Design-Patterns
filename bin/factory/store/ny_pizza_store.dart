@@ -9,10 +9,6 @@ class NYPizzaStore extends PizzaStore{
     switch (type) {
       case PizzaType.cheese:
         return NYCheese();
-      case PizzaType.pepperoni:
-        return NYPepperoni();
-      case PizzaType.clam:
-        return NYClamp();
       case PizzaType.veggie:
         return NYVeggie();
     }

@@ -5,6 +5,7 @@ import 'command/commands/KitchenLightOffCommand.dart';
 import 'command/commands/KittchenLighOnCommand.dart';
 import 'command/commands/LivingLightOffCommand.dart';
 import 'command/commands/LivingLightOnCommand.dart';
+import 'command/commands/MacroCommand.dart';
 import 'command/commands/OpenRadioCommand.dart';
 import 'command/devices/garage_door.dart';
 import 'command/devices/light.dart';
@@ -36,6 +37,18 @@ void main(List<String> arguments) {
     3,
     OpenRadioCommand(radio),
     CloseRadioCommand(radio),
+  );
+  /// Macro Command to turn all lights on
+  remote.setCommand(
+    4,
+    MacroCommand(commands: [
+      LivingLightOnCommand(livingLight),
+      KitchenLightOnCommand(kitchenLight),
+    ]),
+    MacroCommand(commands: [
+      LivingLightOffCommand(livingLight),
+      KitchenLightOffCommand(kitchenLight),
+    ]),
   );
 
   print(remote);

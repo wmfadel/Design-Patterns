@@ -10,4 +10,9 @@ class GarageDoorOpenCommand implements ICommand {
   execute() {
     garageDoor.openDoor();
   }
+
+  @override
+  undo() {
+    garageDoor.closeDoor();
+  }
 }

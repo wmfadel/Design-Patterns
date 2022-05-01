@@ -9,4 +9,9 @@ class MacroCommand implements ICommand {
   execute() {
     commands.forEach((element) => element.execute());
   }
+
+  @override
+  undo() {
+    commands.forEach((element) => element.undo());
+  }
 }

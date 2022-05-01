@@ -10,4 +10,9 @@ class CloseRadioCommand implements ICommand {
   execute() {
     radio.closeRadio();
   }
+
+  @override
+  undo() {
+    radio.openRadio();
+  }
 }

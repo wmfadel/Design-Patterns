@@ -11,4 +11,9 @@ class LivingLightOffCommand implements ICommand{
   execute() {
     light.turnLightOff();
   }
+
+  @override
+  undo() {
+   light.turnLightOn();
+  }
 }

@@ -12,4 +12,9 @@ class KitchenLightOnCommand implements ICommand{
   execute() {
     light.turnLightOn();
   }
+
+  @override
+  undo() {
+    light.turnLightOff();
+  }
 }

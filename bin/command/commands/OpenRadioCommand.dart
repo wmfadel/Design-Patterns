@@ -12,4 +12,9 @@ class OpenRadioCommand implements ICommand {
     radio.setChannel(90.1);
     radio.setVolume(11);
   }
+
+  @override
+  undo() {
+    radio.closeRadio();
+  }
 }

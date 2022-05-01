@@ -56,4 +56,8 @@ void main(List<String> arguments) {
     remote.onCommandPressed(i);
     remote.offCommandPressed(i);
   }
+  print(remote);
+  while(remote.undoStack.isNotEmpty){
+    remote.undo();
+  }
 }

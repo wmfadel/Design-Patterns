@@ -4,7 +4,7 @@ abstract class CaffeineBeverage {
     boilWater();
     brew();
     pourICup();
-    addCondiments();
+    if (customerWantsCondiments()) addCondiments();
   }
 
   brew();
@@ -17,5 +17,9 @@ abstract class CaffeineBeverage {
 
   pourICup() {
     print('pouring in cup');
+  }
+
+  bool customerWantsCondiments() {
+    return true;
   }
 }

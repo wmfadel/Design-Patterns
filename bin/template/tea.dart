@@ -11,4 +11,8 @@ class Tea extends CaffeineBeverage{
     print('adding lemon');
   }
 
+  @override
+  bool customerWantsCondiments() {
+    return false;
+  }
 }
